@@ -3,10 +3,7 @@
 /**
  * main - program to print _putchar
  *
- * created : jojobutercup
- * cc: 5 july, 2022
- *
- * RETURN: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
