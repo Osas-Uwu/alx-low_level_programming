@@ -1,6 +1,4 @@
-#ifndef DOG_H
-#include <stdio.h>
-#include <stdlib.h>
+#include "dog.h"
 
 /**
  * print_dog - printed struct dog
@@ -24,18 +22,18 @@ void print_dog(struct dog *d)
 		printf("Name: %s\n", d->name);
 	}
 
-	if (d->age == NULL)
+	if (d->age < 0)
 	{
 		printf("age: (nil)\n");
 	}
 	else
 	{
-		printf("age: %s\n", d->age);
+		printf("age: %f\n", d->age);
 	}
 
 	if (d->owner == NULL)
 	{
-		print("owner: (nil)\n");
+		printf("owner: (nil)\n");
 	}
 	else
 	{
