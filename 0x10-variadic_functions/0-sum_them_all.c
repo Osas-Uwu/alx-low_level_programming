@@ -2,12 +2,12 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - returns the sum of parameter
+ * sum_them_all - sum all parameters
  *
- * @n: variable of unsigned int
- * @...: variable paremeter
+ * @n: first parameter
+ * @...: variable parameters
  *
- * Return: sum of all parameter
+ * Return: sum of all parameters
  */
 int sum_them_all(const unsigned int n, ...)
 {
