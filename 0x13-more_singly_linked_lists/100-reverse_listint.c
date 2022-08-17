@@ -8,24 +8,23 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *first = *head;
-	listint_t *rest = first->next;
+	listint_t *ahead, *behind;
 
-	/*empty list*/
-	if (*head == NULL)
-		return (*head);
+	if (head == NULL || *head == NULL)
+		return (NULL);
 
-	/*list has only one node*/
-	if (rest == NULL)
-		return (*head);
+	behind = NULL;
 
-	/*reverse the rest list and put the first element at the last*/
-	reverse_listint(&rest);
-	first->next->next = first;
 
-	first->next = NULL;
+	while ((*head)->next != NULL)
+	{
+		ahead = (*head)->next;
+		(*head)->next = behind;
+		behind = *head;
+		*head = ahead;
+	}
 
-	/*change the head pointer*/
-	*head = rest;
-	return (rest);
+	(*head)->next = behind;
+
+	return (*head);
 }
